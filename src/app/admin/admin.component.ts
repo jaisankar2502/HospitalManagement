@@ -35,7 +35,8 @@ DoctorName:any
       password:new FormControl('',[Validators.required])
     })
     this.departmentForm=new FormGroup({
-      depName:new FormControl('',[Validators.required])
+      depName:new FormControl('',[Validators.required]),
+      deptype: new FormControl('',[Validators.required])
     })
   }
 
@@ -98,6 +99,7 @@ DoctorName:any
   }
   fetchDoctorCount(){
     this.hospitalservice.fetchCout().subscribe(res=>{
+      console.log("count");
       console.log(res)
       this.Doctorcount=res;
 

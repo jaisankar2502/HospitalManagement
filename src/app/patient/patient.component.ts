@@ -39,17 +39,16 @@ export class PatientComponent implements OnInit {
     this.fetchdepartment();
   }
   fetchdepartment() {
-    this.hospialservice.fetchDoctor().subscribe(res => {
-      // console.log(res);
+    this.hospialservice.fetchDepartmentForPatient().subscribe(res => {
+       console.log(res);
       this.depName = res;
-
+   
     })
   }
   findDoctor(id: any) {
     console.log(id);
-
     this.hospialservice.fetchcurrentdoctor(id).subscribe(res => {
-      //   console.log(res);
+        console.log(res);
       this.doctorName = res;
 
     })

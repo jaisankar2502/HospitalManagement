@@ -22,8 +22,11 @@ userLOgin(form:any):Observable<any>{
   return this.http.post("http://localhost:8080/login",form)
 }
 fetchDepartment():Observable<any>{
-  return this.http.get("http://localhost:8080/user/department",{"headers":this.header});
+  return this.http.get("http://localhost:8080/user/department");
 
+}
+fetchDepartmentForPatient():Observable<any>{
+  return this.http.get("http://localhost:8080/user/patientDep");
 }
 addUser(form:any):Observable<any>{
   return this.http.post("http://localhost:8080/user",form,)
@@ -34,8 +37,8 @@ return this.http.post("http://localhost:8080/user/department",form)
 fetchDoctor():Observable<any>{
    return this.http.get("http://localhost:8080/user/doctor");
 }
-fetchCout() {
-  return this.http.get("http://localhost:8080/user/count",{headers:this.header});
+fetchCout():Observable<any> {
+  return this.http.get("http://localhost:8080/user/count");
 }
 fetchcurrentdoctor(id:any):Observable<any>{
   return this.http.get("http://localhost:8080/user/doctor/"+id);

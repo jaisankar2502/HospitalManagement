@@ -329,7 +329,7 @@
 
   <ng-template #depcontent let-modal>
     <div class="modal-header">
-      <h4 class="modal-title" id="modal-basic-title">Add Depatment</h4>
+      <h4 class="modal-title" id="modal-basic-title">Add Department</h4>
       <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
     </div>
     <div class="modal-body"> 
@@ -340,9 +340,19 @@
                 <input type="text" class="form-control" id="depName" formControlName="depName">
                 <div *ngIf="submitted|| departmentForm.get('depName')?.invalid && (departmentForm.get('depName')?.dirty|| departmentForm.get('depName')?.touched)">
                     <span class="text-danger"> enter the feild</span>
-
                 </div>
             </div>
+        <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Type:</label>
+            <select  id="type" class="form-control" formControlName="deptype">
+                <option value="">--Select--</option>
+                <option value="1">Admin</option>
+                <option value="2">Doctor</option>
+                </select>
+                <div *ngIf="submitted || myform.get('deptype')?.invalid && (myform.get('deptype')?.dirty || myform.get('deptype')?.touched)"class="text-danger">
+                    <span   *ngIf="myform.controls['deptype'].errors?.['required']">enter the field</span>
+                </div>
+        </div>
         </form>
     </div>
     <div class="modal-footer">
