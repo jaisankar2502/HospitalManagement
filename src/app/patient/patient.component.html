@@ -1,0 +1,95 @@
+<app-mainheader></app-mainheader>
+
+<div class="mainbody">
+  <div class="content row justify-content-center">
+    <div class="container"> 
+      <form [formGroup]="myform" class="align">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Firstname:</label>
+              <input type="text" class="form-control" id="patientName" formControlName="patientName" >
+              <div *ngIf="submitted|| myform.get('patientName')?.invalid && (myform.get('patientName')?.dirty|| myform.get('patientName')?.touched)" class="text-danger">
+                  <span *ngIf="myform.controls['patientName'].errors?.['required']">enter the field</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Email:</label>
+              <input type="text" class="form-control" id="emails" formControlName="email">
+              <div *ngIf="submitted || myform.get('email')?.invalid && (myform.get('email')?.dirty || myform.get('email')?.touched)"class="text-danger">
+                  <span *ngIf="myform.controls['email'].errors?.['required']">enter the field</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Department:</label>
+            <select  id="type" class="form-control" formControlName="department" #depid (click)="findDoctor(depid.value)" >
+              <option value="">--Select--</option>
+              <option *ngFor="let dep of depName; let i = index" value="{{dep.depId}}" >{{dep.depName}}</option>
+               
+                </select>
+                <div *ngIf="submitted || myform.get('department')?.invalid && (myform.get('department')?.dirty || myform.get('department')?.touched)"class="text-danger">
+                  <span   *ngIf="myform.controls['department'].errors?.['required']">enter the field</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Date:</label>
+            <input type="date" class="form-control" id="Date" formControlName="bookingDate" #bookigdate (change)="fetchTime(docid.value,bookigdate.value)">
+            <div *ngIf="submitted || myform.get('bookingDate')?.invalid && (myform.get('bookingDate')?.dirty || myform.get('bookingDate')?.touched)"class="text-danger">
+                <span   *ngIf="myform.controls['bookingDate'].errors?.['required']">enter the field</span>
+            </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Age:</label>
+              <input type="text" class="form-control" id="Age" formControlName="age">
+              <div *ngIf="submitted || myform.get('age')?.invalid && (myform.get('age')?.dirty || myform.get('age')?.touched)"class="text-danger">
+                  <span   *ngIf="myform.controls['age'].errors?.['required']">enter the field</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Phone:</label>
+              <input type="text" class="form-control" id="phones" formControlName="phone">
+              <div *ngIf="submitted || myform.get('phone')?.invalid && (myform.get('phone')?.dirty || myform.get('phone')?.touched)"class="text-danger">
+                  <span   *ngIf="myform.controls['phone'].errors?.['required']">enter the field</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Doctor</label>
+            <select  id="type" class="form-control" formControlName="doctorName" #docid >
+                <option value="">--Select--</option>
+                <option *ngFor="let doc of doctorName; let i= index " value="{{doc.userId}}">{{doc.firstName+doc.lastName}}</option>
+                </select>
+                <div *ngIf="submitted || myform.get('doctorName')?.invalid && (myform.get('doctorName')?.dirty || myform.get('doctorName')?.touched)"class="text-danger">
+                    <span   *ngIf="myform.controls['doctorName'].errors?.['required']">enter the field</span>
+                </div>
+            </div>
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Time:</label>
+              <select  id="type" class="form-control" formControlName="bookingTime">
+                <option value="">--Select--</option>
+                <option *ngFor="let timeslote of Timeslote let i=index" value="{{timeslote}}">{{timeslote}}</option>
+            
+                </select>
+              <div *ngIf="submitted || myform.get('bookingTime')?.invalid && (myform.get('bookingTime')?.dirty || myform.get('bookingTime')?.touched)"class="text-danger">
+                  <span   *ngIf="myform.controls['bookingTime'].errors?.['required']">enter the field</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+
+          <div class="container-fluid">
+            <h4 class=""style="text-align:center;">Booked-Slote</h4>
+            <button *ngFor="let booketime of Booktime" class=" btn-success mr-2">{{booketime}}</button>
+          </div>
+        </div>
+        <button class="btn" (click)="doctorBooking()">Book</button>
+
+    </form>
+  </div>
+  </div>
+</div>
+ 
+<app-footer></app-footer>
+

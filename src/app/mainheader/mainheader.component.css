@@ -1,0 +1,31 @@
+
+   .fa-brands{
+    color: #dfe7e7;
+    font-size: 15px;
+    top: 50%;
+    justify-content: center;
+    padding: 2%;
+}
+.space{
+  margin-left: -343px;
+
+}
+.space2{
+  margin-left:100px;
+}
+.space3{
+  margin-left:150px;
+}
+
+.hdr-top{
+    background: #f3969a;
+  font-family: Lato-Bold,Arial,sans-serif;
+  font-size: 15px;
+  line-height: 28px;
+    height: 30px;
+    width: 100%;
+  }
+.center {
+  top: 40%;
+  color: aliceblue;
+  }

@@ -1,0 +1,102 @@
+
+
+.hdr-top{
+      background: #237d9e;
+    font-family: Lato-Bold,Arial,sans-serif;
+    font-size: 15px;
+    line-height: 28px;
+      height: 30px;
+      width: 100%;
+    }
+.center {
+    top: 40%;
+    color: aliceblue;
+    }
+    .fa-brands{
+        color: #dfe7e7;
+        font-size: 15px;
+        top: 50%;
+        justify-content: center;
+        padding: 2%;
+    }
+    .space{
+      margin-left: -350px;
+
+    }
+    .space2{
+      margin-left:100px;
+    }
+    .space3{
+      margin-left:150px;
+    }
+    .margin1{
+      margin-left: 443px;
+      
+    }
+    .margin2{
+      margin-left: 6px;
+    }
+    .margin3{
+      margin-left: 10px;
+    }
+    .iconspace{
+      line-height: 131px; 
+      margin-left: 269px;
+    }
+    .emcy{
+      line-height: 131px; 
+      padding: 20px;
+      background-color:#DB0B20;
+      color: aliceblue;
+      margin-left: 2px;
+      margin-right: 5px;
+      font-size: small;
+      text-align: justify;
+      white-space: pre-line;
+     
+    }
+    #number{
+      font-size:15px;
+      word-break: break-all;
+    }
+    .helpln{
+      line-height: 131px; 
+      padding: 20px;
+      background-color:#56cc9d;
+      color: aliceblue;
+      margin-left: 2px;
+      margin-right: 5px;
+      font-size: small;
+      text-align: justify;
+      white-space: pre-line;
+     
+    }
+    .icon{
+      position: absolute;
+      left: calc(50% - -420px);
+      line-height: 127px;
+    }
+      .srposition{
+        margin-top: 45px;
+      } 
+    .srpositiondiv{
+      margin-left: 189px;
+    }
+    .container-fluid {
+
+    }
+    .iconsize{
+      width: 10;
+    }
+    .apollo-logo{
+      width:400px ;
+      height:200px; 
+      line-height: 118px;
+      background-color: transparent;
+    }
+    .imgposition{
+      margin-top: 0px;
+    }
+    .btnposition{
+      margin-top: 2px;
+    }
