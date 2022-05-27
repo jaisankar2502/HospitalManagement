@@ -1,38 +1,17 @@
-body{
-    /* background-image:url("/src/assets/images/loginbg.jpeg") */
-    background-color:aqua;
-}
-.center {
-    background-color:#eceeef;
-    margin: auto;
-    width: 50%;
-    border: 3px solid #f3969a;
-    padding: 10px;
-  }
-  .container{
-      margin-top: 10%;
-  }
-  h1{
 
-    text-align: center;
+  .container{
+      margin-top: 6%;
+  }
+
+  .card-body{
+    background-color:bisque;
+    border: 3px solid #797374;
+    border-radius: 2pc;
   }
   .btn{
-      margin-left: 43%;
-   
-      margin-top: 15px;
-      border: 3px solid #56cc9d;
-      background-color: #56cc9d;
-  }
-  .content{
-    margin-left: 150px;
-    margin-right: 150px;
-    margin-bottom: 10cm;
-  }
- 
-  .mainbody{
-width: 100%;
-padding-bottom: 2cm;
-background-image: url('https://thumbs.dreamstime.com/z/healthcare-medical-concept-medicine-doctor-stethoscope-hand-patients-come-to-hospital-background-179931139.jpg');
-  
-      
-  }
+    margin-left: 40%;
+    margin-top: 10px;
+    border: 3px solid #b7cac3;
+    background-color: #e45311;
+    border-radius: 2pc;
+}

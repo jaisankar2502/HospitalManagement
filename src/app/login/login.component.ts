@@ -23,9 +23,13 @@ export class LoginComponent implements OnInit {
       const accessToken=res.accessToken.value;
       const refresh_toke= res.refreshToken.value;
       let Name= res.firstName+res.lastName
+      let id = res.userId;
        localStorage.setItem("accessToken",accessToken);
        localStorage.setItem("refreshToken",refresh_toke);
        localStorage.setItem('name',Name);
+       localStorage.setItem('userid',id);
+       this.hospitalservice.getdoctorid(res.userId);
+
        if(res.type!="2"){
          this.router.navigateByUrl('admin');
 

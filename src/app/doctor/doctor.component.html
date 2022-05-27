@@ -92,7 +92,7 @@
                             <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
                             <div class="info-box-content">
                                 <span class="info-box-text">Total Booking</span>
-                                <span class="info-box-number">41,410</span>
+                                <span class="info-box-number">{{patientcount}}</span>
                             </div>
 
                         </div>
@@ -128,13 +128,14 @@
                 </div>
 
                 <div class="row">
-
                     <div class="col-md-8">
                         <div class="card">
                             <div class="card-header border-transparent">
-                                <h3 class="card-title">Doctors</h3>
+                                <h3 class="card-title">Patients</h3>
                                 <div class="card-tools">
+                                    <input type="date" class="mr-2" #date (change)="fetchPatient(date.value)">
                                 </div>
+                               
                             </div>
 
                             <div class="card-body p-0">
@@ -142,22 +143,19 @@
                                     <table class="table m-0">
                                         <thead>
                                             <tr>
-                                                <th>Doc ID</th>
-                                                <th>Name</th>
-                                                <th>Depatment</th>
+                                                <th>OpID</th>
+                                                <th>Op Name</th>
+                                                <th>Age</th>
                                                 <th>Status</th>
 
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td><a href="pages/examples/invoice.html">OR9842</a></td>
-                                                <td>Call of Duty IV</td>
-                                                <td>
-                                                    <div class="sparkbar" data-color="#00a65a" data-height="20">
-                                                        90,80,90,-70,61,-83,63</div>
-                                                </td>
-                                                <td><span class="badge badge-success">Shipped</span></td>
+                                            <tr *ngFor="let patient of patientDetails,let i= index">
+                                                <td>Op{{patient.booking_Id}}</td>
+                                                <td>{{patient.patientName}}</td>
+                                                <td>{{patient.age}}</td>
+                                                <td><span class="badge badge-success">{{patient.bookingTime}}</span></td>
                                             </tr>
                                         </tbody>
                                     </table>

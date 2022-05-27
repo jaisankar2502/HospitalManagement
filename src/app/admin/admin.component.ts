@@ -54,6 +54,7 @@ DoctorName:any
 
   logOut(){
     this.router.navigateByUrl('login')
+    this.router.navigateByUrl('')
     localStorage.clear();
    
     
