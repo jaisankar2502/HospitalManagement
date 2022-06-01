@@ -21,6 +21,7 @@ export class PatientComponent implements OnInit {
   Timeslote = ["9.00", "9.30", "10.00", "10.30", "11.00", "11.30", "12.00", "2.00", "2.30", "3.00"];
   minDate = new Date();
   message!:String
+  itemQuantity!: number[];
   constructor(private hospialservice: HospitalserviceService) {
     this.myform = new FormGroup({
       patientName: new FormControl('', [Validators.required]),
@@ -36,6 +37,7 @@ export class PatientComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.itemQuantity = Array(100).fill(0).map((x,i)=>i+1);
     this.fetchdepartment();
   }
   fetchdepartment() {

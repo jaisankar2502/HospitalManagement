@@ -64,7 +64,7 @@ fetchcurrentdoctor(id:any):Observable<any>{
   return this.http.get("http://localhost:8080/user/doctor/"+id);
 }
 addPatient(data:any):Observable<any>{
-  return this.http.post("http://localhost:8080/patient",data);
+  return this.http.post("http://localhost:8080/patient/add",data);
 }
 
 fetchTime(docid:number,date:any):Observable<any>{

@@ -11,6 +11,13 @@
             <li class="nav-item d-none d-sm-inline-block">
                 <a href="#" class="nav-link">Contact</a>
             </li>
+            <li>
+                <div class="input-group">
+                    <div class="form-outline">
+                      <input type="search" class="form-control" placeholder="Search" #query (input)="search(query.value)" />
+                    </div>
+                  </div>
+            </li>
             
         </ul>
     </nav>
@@ -202,7 +209,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr *ngFor="let doctor of  Doctordetaisl let i= index">
+                                            <tr *ngFor="let doctor of  Doctordetaisl" >
                                                 <td *ngIf="doctor.type!=1">Dr{{doctor.userId}}</td>
                                                 <td *ngIf="doctor.type!=1">Dr {{doctor.firstName+doctor.lastName}}</td>
                                                 <td *ngIf="doctor.type!=1">

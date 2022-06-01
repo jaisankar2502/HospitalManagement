@@ -8,12 +8,12 @@ import { PatientComponent } from './patient/patient.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
-
+import { AuthGuard } from './auth.guard';
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'login',component:LoginComponent},
-  {path:'admin',component:AdminComponent},
-  {path:'doctor',component:DoctorComponent},
+  {path:'admin',component:AdminComponent,canActivate:[AuthGuard]},
+  {path:'doctor',component:DoctorComponent,canActivate:[AuthGuard]},
   {path:'patient',component:PatientComponent}
 ];
 

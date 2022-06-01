@@ -1,4 +1,4 @@
-
+/* 
 
 .hdr-top{
       background: #237d9e;
@@ -73,7 +73,7 @@
     }
     .icon{
       position: absolute;
-      left: calc(50% - -420px);
+      left: calc(25%);
       line-height: 127px;
     }
       .srposition{
@@ -99,4 +99,4 @@
     }
     .btnposition{
       margin-top: 2px;
-    }
+    } */

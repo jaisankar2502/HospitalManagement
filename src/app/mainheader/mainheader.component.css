@@ -1,4 +1,4 @@
-
+/* 
    .fa-brands{
     color: #dfe7e7;
     font-size: 15px;
@@ -18,7 +18,7 @@
 }
 
 .hdr-top{
-    background: #f3969a;
+    background: #165fe6;
   font-family: Lato-Bold,Arial,sans-serif;
   font-size: 15px;
   line-height: 28px;
@@ -28,4 +28,44 @@
 .center {
   top: 40%;
   color: aliceblue;
+  } */
+  #topbar {
+    background: rgb(255, 255, 255);
+    height: 40px;
+    font-size: 14px;
+    transition: all 0.5s;
+    z-index: 996;
+  }
+  #topbar.topbar-scrolled {
+    top: -40px;
+  }
+  #topbar .contact-info a {
+    line-height: 1;
+    color: #444444;
+    transition: 0.3s;
+  }
+  #topbar .contact-info a:hover {
+    color: #1977cc;
+  }
+  #topbar .contact-info i {
+    color: #1977cc;
+    padding-right: 4px;
+    margin-left: 15px;
+    line-height: 0;
+  }
+  #topbar .contact-info i:first-child {
+    margin-left: 0;
+  }
+  #topbar .social-links a {
+    color: #437099;
+    padding-left: 15px;
+    display: inline-block;
+    line-height: 1px;
+    transition: 0.3s;
+  }
+  #topbar .social-links a:hover {
+    color: #1977cc;
+  }
+  #topbar .social-links a:first-child {
+    border-left: 0;
   }

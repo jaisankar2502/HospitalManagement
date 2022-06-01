@@ -11,6 +11,13 @@
             <li class="nav-item d-none d-sm-inline-block">
                 <a href="#" class="nav-link">Contact</a>
             </li>
+            <li>
+                <div class="input-group">
+                    <div class="form-outline">
+                      <input type="search" id="form1" class="form-control" placeholder="Search" #query (input)="searchPatient(query.value)" />
+                    </div>
+                  </div>
+            </li>
             
         </ul>
     </nav>

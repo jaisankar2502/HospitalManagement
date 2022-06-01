@@ -19,10 +19,11 @@ export class DoctorComponent implements OnInit {
   ngOnInit(): void {
     this.name= localStorage.getItem('name');
     this.docid= localStorage.getItem('userid');
+    this.fetchPatient();
     console.log("oninit"+this.docid)
     this. totalBooking(this.docid)
-    this.fetchPatient();
-  }
+    
+   }
   logOut(){
     localStorage.clear();
   }
@@ -47,4 +48,24 @@ export class DoctorComponent implements OnInit {
 
     })
   }
+
+
+
+
+
+
+  //<---------search-------->
+  searchPatient(query:any){
+    if(query){
+      this.patientDetails= this.patientDetails.filter((pat:any)=>{
+        const regex = new RegExp(`^${query}`, 'gi');
+        return pat['patientName'].match(regex);
+    }
+      )
+  }
+    else{
+      this.fetchPatient();
+    }
+  
+}
 }

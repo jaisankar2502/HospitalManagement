@@ -1,8 +1,4 @@
-.home{
-  background-image: url("src/assets/Images/part_of_team.jpg");
-  width:100%;
-  height: 13cm;
-}
+
 .btnposition{
   margin-left: 20px;
 }
@@ -22,6 +18,7 @@
 	border-radius:50px;
 	text-align:center;
 	box-shadow: 2px 2px 3px #999;
+	z-index:10;
   
 }
 
@@ -41,8 +38,15 @@
 	text-align:center;
 	box-shadow: 2px 2px 3px #999;
   font-size: small;
+  z-index:10;
 }
 .icon-center {
   display: block;
   margin-top: 17px;
+}
+.carousel-item{
+	height: 500px;
+	width: 100%;
+	object-fit:contain;
+	background-size:auto;
 }

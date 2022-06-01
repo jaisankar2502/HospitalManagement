@@ -1,33 +1,10 @@
-
-header {
-    background: #000;
-    color: #fff
-}
-
-.left-side,
-.right-side {
-    height: 100vh
-}
-
-
-.navbar-nav>li>a {
-    color: rgb(7, 6, 6)
-}
-
-.navbar-nav>li:hover {
-    border-bottom: 1px solid rgb(0, 0, 0)
-}
-
-.navbar-nav>.active {
-    border-bottom: 1px solid rgb(3, 3, 3)
-}
-
-.navbar-brand {
-    font-family: 'Allerta Stencil', sans-serif;
-    color: #0b81e2
-}
-
-.navbar-brand:hover {
-    color: #fff
-}
-
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/**
+* Desktop Navigation 
+*/
+.navbar {
+    margin: 40px;
+    margin-bottom: 10px;
+  }

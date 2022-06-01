@@ -42,7 +42,10 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="recipient-name" class="col-form-label">Age:</label>
-              <input type="text" class="form-control" id="Age" formControlName="age">
+             <select formControlName="age"class="form-control" >
+               <option value="">--Select--</option>
+               <option *ngFor="let number of itemQuantity" value="{{number}}">{{number}}</option>
+             </select>
               <div *ngIf="submitted || myform.get('age')?.invalid && (myform.get('age')?.dirty || myform.get('age')?.touched)"class="text-danger">
                   <span   *ngIf="myform.controls['age'].errors?.['required']">enter the field</span>
               </div>

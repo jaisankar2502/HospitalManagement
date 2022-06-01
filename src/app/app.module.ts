@@ -14,6 +14,12 @@ import{  HttpClient,HttpClientModule} from '@angular/common/http'
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PatientComponent } from './patient/patient.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { DepartmentHomeComponent } from './department-home/department-home.component';
+import { CounterhomeComponent } from './counterhome/counterhome.component';
+ 
+
+
 
 
 
@@ -28,7 +34,10 @@ import { PatientComponent } from './patient/patient.component';
     FooterComponent,
     NavbarComponent,
     MainheaderComponent,
-    PatientComponent
+    PatientComponent,
+    GalleryComponent,
+    DepartmentHomeComponent,
+    CounterhomeComponent
   ],
   imports: [
     BrowserModule,

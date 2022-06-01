@@ -1,8 +1,10 @@
+import { IfStmt } from '@angular/compiler';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators ,FormBuilder, Form} from '@angular/forms';
 import { Router } from '@angular/router';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import { HospitalserviceService } from '../hospitalservice.service';
+
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
@@ -16,6 +18,9 @@ export class AdminComponent implements OnInit {
   Doctordetaisl:any;
   Doctorcount:any;
 DoctorName:any
+
+
+
 
   constructor(private modalservice:NgbModal, private hospitalservice:HospitalserviceService,private router :Router) { 
     this.myform= new FormGroup({
@@ -41,11 +46,11 @@ DoctorName:any
   }
 
   ngOnInit(): void {
-    this.fetchDepartment();
     this.fetchDoctor();
-    this. fetchDoctorCount();
     this.DoctorName= localStorage.getItem('name');
-  }
+    this.fetchDepartment();
+    this. fetchDoctorCount();
+    }
   open(content: any) {
     const modalRef = this.modalservice.open(content,{backdrop : false});
   }
@@ -99,7 +104,7 @@ DoctorName:any
     })
   }
   fetchDoctorCount(){
-    this.hospitalservice.fetchCout().subscribe(res=>{
+    this.hospitalservice.fetchCout().subscribe((res:any)=>{
       console.log("count");
       console.log(res)
       this.Doctorcount=res;
@@ -107,4 +112,16 @@ DoctorName:any
     })
   }
 
+search(event:any){
+  console.log(event)
+  if(event){
+    this.Doctordetaisl= this.Doctordetaisl.filter((doc:any)=>{
+      const regex = new RegExp(`^${event}`, 'gi');
+      return doc['firstName'].match(regex);
+  })
+  }
+ else{
+   this.fetchDoctor();
+ }
+}
 }
