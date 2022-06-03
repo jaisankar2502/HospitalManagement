@@ -1,0 +1,21 @@
+.section-title {
+    text-align: center;
+    margin-bottom:1.5cm;
+}
+.container{
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: #2c4964;
+  }
+          
+.uderline h2{ text-decoration: none; }
+.uderline h2:hover { text-decoration:underline; }
+    

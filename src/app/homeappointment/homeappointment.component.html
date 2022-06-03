@@ -1,0 +1,54 @@
+<div class="container-fluid">
+    <div class="section_tittle">
+        <h2>Make an Appointment</h2>
+        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+    </div>
+    <div class="container">
+        <form [formGroup]="appointmentform" >
+            <div class="row">
+                <div class="col-md-4 form-group ">
+                <input type="text"  placeholder="Your Name" formControlName="Name" class='form-control'>
+                </div>
+                <div class="col-md-4 form-group">
+                    <input type="text"  placeholder="Your Email" formControlName="Email" class='form-control'>
+                </div>
+                <div class="col-md-4 form-group">
+                    <input type="text"  placeholder="Your Phone" formControlName="Phone" class='form-control'>
+                     </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-4 form-group mt-3">
+                    <input type="date" placeholder="Your Date" formControlName="Date" class='form-control'>
+                </div>
+                <div class="col-md-4 form-group mt-3">
+                    <select name="department" id="department" class="form-select" formControlName="Department">
+                        <option value="">Select Department</option>
+                        <option value="Department 1">Department 1</option>
+                        <option value="Department 2">Department 2</option>
+                        <option value="Department 3">Department 3</option>
+                      </select>
+                </div>
+                <div class="col-md-4 form-group mt-3">
+                    <select name="doctor" id="doctor" class="form-select" formControlName="Doctor">
+                        <option value="">Select Doctor</option>
+                        <option value="Doctor 1">Doctor 1</option>
+                        <option value="Doctor 2">Doctor 2</option>
+                        <option value="Doctor 3">Doctor 3</option>
+                      </select>
+                </div>
+            </div>
+            <div class="row">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)" formControlName="Message"></textarea>
+            </div>
+            <div class="text-center">
+                <button type="submit" (click)=" make_an_Appointment()">Make an Appointment</button>
+            </div>
+        </form>
+
+
+
+    </div>
+
+   
+</div>

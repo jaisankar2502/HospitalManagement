@@ -1,0 +1,109 @@
+.contact .info {
+    width: 100%;
+    background: #fff;
+  }
+  .contact .info i {
+    font-size: 20px;
+    color: #1977cc;
+    float: left;
+    width: 44px;
+    height: 44px;
+    background: #d6e9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+  }
+  .contact .info h4 {
+    padding: 0 0 0 60px;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #2c4964;
+  }
+  .contact .info p {
+    padding: 0 0 0 60px;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #4b7dab;
+  }
+  .contact .info .email, .contact .info .phone {
+    margin-top: 40px;
+  }
+  .contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
+    background: #1977cc;
+    color: #fff;
+  }
+  
+  .contact.form-group {
+    padding-bottom: 8px;
+  }
+  .contact input,textarea {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+  }
+  .contact .php-email-form input {
+    height: 44px;
+  }
+  .contact .php-email-form textarea {
+    padding: 10px 12px;
+  }
+
+  .section-title {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  .section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    color: #2c4964;
+  }
+  .section-title p {
+    margin-top:.5px;
+
+  }
+  button{
+    margin: 10px;
+    background: #1977cc;
+    border: 0;
+    padding: 10px 35px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 50px;
+}
+button:hover{
+    background: #1c84e3;
+}
+h2{
+    text-decoration: none;
+
+}
+h2:hover{
+    text-decoration: underline;
+}
+.container{
+    margin-top:10px;
+}
+
+.info i{
+    background-color: #176db8;
+    border-radius: 50px;
+    color: antiquewhite;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+}
+.info i:hover{
+
+    background: #42a0f3;
+    color: #fff;
+
+}

@@ -92,5 +92,16 @@ fetchCurrentPatient(id:any,date:any):Observable<any>{
 }
 //<-----------------------------end----------------------------------------->
 
+//<---------------------------google-sheet----------------------------------->
 
+appoinmentsend(data:any):Observable<any>{
+  return this.http.post("https://sheetdb.io/api/v1/g40c7rntdc4hc",data)
+  
+}
+
+appoinmentfetch():Observable<any>{
+  return this.http.get("https://sheetdb.io/api/v1/g40c7rntdc4hc")
+}
+
+//<--------------------------- end------------------------------------------->
 }

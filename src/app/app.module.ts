@@ -17,8 +17,8 @@ import { PatientComponent } from './patient/patient.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { DepartmentHomeComponent } from './department-home/department-home.component';
 import { CounterhomeComponent } from './counterhome/counterhome.component';
- 
-
+import { HomeappointmentComponent } from './homeappointment/homeappointment.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 
@@ -37,7 +37,9 @@ import { CounterhomeComponent } from './counterhome/counterhome.component';
     PatientComponent,
     GalleryComponent,
     DepartmentHomeComponent,
-    CounterhomeComponent
+    CounterhomeComponent,
+    HomeappointmentComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +49,7 @@ import { CounterhomeComponent } from './counterhome/counterhome.component';
     NgbModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

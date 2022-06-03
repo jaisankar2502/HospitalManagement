@@ -9,12 +9,14 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AuthGuard } from './auth.guard';
+import { ContactComponent } from './contact/contact.component';
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'login',component:LoginComponent},
   {path:'admin',component:AdminComponent,canActivate:[AuthGuard]},
   {path:'doctor',component:DoctorComponent,canActivate:[AuthGuard]},
-  {path:'patient',component:PatientComponent}
+  {path:'patient',component:PatientComponent},
+  {path:'contact',component:ContactComponent},
 ];
 
 @NgModule({

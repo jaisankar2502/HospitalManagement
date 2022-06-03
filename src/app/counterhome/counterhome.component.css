@@ -1,0 +1,33 @@
+.container{
+    margin-top: 30px;
+    text-align: center;
+}
+.count-box i{
+    background-color: #1977cc;
+    border-radius: 50px;
+    color: antiquewhite;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+}
+.count-box{
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.count-box:hover{
+    -webkit-transform: scale(1.3);
+	transform: scale(1.3);
+
+}
+.count-box span{
+    display: block;
+    font-size: 25px;
+    font-weight: 600;
+    color: #082744;
+}
+

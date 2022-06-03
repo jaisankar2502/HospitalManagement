@@ -50,6 +50,7 @@ DoctorName:any
     this.DoctorName= localStorage.getItem('name');
     this.fetchDepartment();
     this. fetchDoctorCount();
+    this.getAppointment();
     }
   open(content: any) {
     const modalRef = this.modalservice.open(content,{backdrop : false});
@@ -123,5 +124,11 @@ search(event:any){
  else{
    this.fetchDoctor();
  }
+}
+
+getAppointment(){
+  this.hospitalservice.appoinmentfetch().subscribe(res=>{
+    console.log(res);
+  })
 }
 }
